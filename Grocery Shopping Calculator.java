@@ -6,11 +6,11 @@ package Invoice;
 import java.util.Scanner;
 public class Main {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 		
-		Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("Enter the price of item 1: ");
+	System.out.print("Enter the price of item 1: ");
         double price1 = scanner.nextDouble();
         System.out.print("Enter the quantity of item 1: ");
         int quantity1 = scanner.nextInt();
@@ -42,6 +42,6 @@ public class Main {
         System.out.printf("Final Total    : PHP %.2f\n", finalTotal);
 
         scanner.close();
-	}
+    }
 
 }
