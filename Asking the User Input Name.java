@@ -6,26 +6,26 @@ package com.techvidvan.helloworldexample;
 import java.util.Scanner;
 public class HelloWorld {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 		
-		Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 		        
-		System.out.print("What is your name: ");
-		String name = scanner.nextLine();
+	System.out.print("What is your name: ");
+	String name = scanner.nextLine();
 		        
-		System.out.print("How old are you: ");
-		int age = scanner.nextInt();
+	System.out.print("How old are you: ");
+	int age = scanner.nextInt();
 		        
-		System.out.println("How are you?: ");
-		char grade = scanner.next().charAt(0);
+	System.out.println("How are you?: ");
+	char grade = scanner.next().charAt(0);
 		        
-		System.out.println("What is your GPA last semester?:");
-		double gpa = scanner.nextDouble();
+	System.out.println("What is your GPA last semester?:");
+	double gpa = scanner.nextDouble();
 		        
-		System.out.println("Are you a student (true/false):");
-		boolean block = scanner.nextBoolean();
+	System.out.println("Are you a student (true/false):");
+	boolean block = scanner.nextBoolean();
 		   
 
-	}
+    }
 
 }
