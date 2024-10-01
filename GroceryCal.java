@@ -1,10 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package grocerycal;
+//Comilang, Tayshaun M.
+//CITCS 1N-A
+//September 13, 2024
 
+package grocerycal;
 import java.util.Scanner;
 public class GroceryCal{
 
