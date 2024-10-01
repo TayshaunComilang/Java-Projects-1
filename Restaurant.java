@@ -8,8 +8,7 @@ public class Restaurant {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int menuChoice;
-        int quantity;
+        int menuChoice, quantity;
         double totalAmount = 0;
         
         while (true) {
