@@ -4,7 +4,7 @@
 
 package grocerycal;
 import java.util.Scanner;
-public class GroceryCal{
+public class GroceryShoppingCalculator{
 
 	public static void main(String[] args) {
             
