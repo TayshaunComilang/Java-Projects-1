@@ -1,52 +1,38 @@
-// COMILANG, TAYSHAUN M.
+//Comilang, Tayshaun M.
 //CITCS 1N-A
 
-package binary;
+package com.mycompany.binarycalculator;
 import java.util.Scanner;
-public class Binary {
+public class BinaryCalculator {
 
+    public static String decimalToBinary(int decimal) {
+        return Integer.toBinaryString(decimal);
+    }
 
     public static void main(String[] args) {
-        
-        Scanner scan = new Scanner(System.in);
-        int prompt = 1;
-        
-        for(int o=0; o < prompt; o++) {
-            
-            System.out.print("Type a decimal: ");
-            int decimal = scan.nextInt();
-            char[] bin = new char[255];
-            int size = 1;
-            
-            for(int i=0; i < size; i++) {
-                if(decimal % 2 != 0) {
-                    bin[size] = '1';
-                }
-                else {
-                    bin[size] = '0';
-                }
-                decimal = decimal / 2;
-                size++;
-                if(decimal==0) {
-                    i = size;
-                }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Decimal to Binary Converter");
+        System.out.println("Type 'STOP' to end the program.");
+
+        while (true) {
+            System.out.print("Enter a decimal number: ");
+            String userInput = scanner.nextLine();
+
+            if (userInput.equalsIgnoreCase("STOP")) {
+                System.out.println("Program terminated.");
+                break;
             }
-            
-            System.out.print("Binary : ");
-            for(int i=size; i > 0; i--) {
-                System.out.print(bin[i]);  
+
+            try {
+                int decimalNumber = Integer.parseInt(userInput);
+                String binaryNumber = decimalToBinary(decimalNumber);
+                System.out.println("The binary representation of " + decimalNumber + " is " + binaryNumber);
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter a valid decimal number.");
             }
-            
-            System.out.print("\n\n");
-            System.out.print("Type GO to convert again, STOP to exit : ");
-            scan.nextLine();
-            String type = scan.nextLine();
-            
-            if(type.equals("STOP") || type.equals("stop") || type.equals("Stop")) {
-                prompt = 0;
-            }
-            
-            prompt++;
         }
+
+        scanner.close();
     }
 }
+
