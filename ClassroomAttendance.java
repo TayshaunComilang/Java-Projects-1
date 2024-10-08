@@ -3,7 +3,6 @@
 
 package com.mycompany.classroomattendance;
 import java.util.Scanner;
-
 public class ClassroomAttendance {
 
     public static void main(String[] args) {
