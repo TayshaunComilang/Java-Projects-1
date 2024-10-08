@@ -13,7 +13,8 @@ public class ClassroomAttendance {
         int totalStudents = scanner.nextInt();
         
         //Variables to count present and absent students
-        int presentCount, absentCount = 0;
+        int presentCount = 0;
+        int absentCount = 0;
         
         //Loop through each student to take attendance
         for (int i = 1; i <= totalStudents; i++) {
