@@ -13,8 +13,7 @@ public class Grocery {
         double totalAmount = scanner.nextDouble();
         
         //Initialized dicount variables
-        double discount = 0;
-        double finalPrice;
+        double discount, finalPrice = 0;
         
         //Determine discount based on the total purchased amount
         if (totalAmount < 1000) {
