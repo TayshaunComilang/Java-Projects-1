@@ -2,7 +2,7 @@
 //CITCS 1N-A
 //September 30, 2024
 
-package com.mycompany.restaurant;
+package restaurant;
 import java.util.Scanner;
 public class Restaurant {
 
@@ -10,6 +10,8 @@ public class Restaurant {
         Scanner scanner = new Scanner(System.in);
         int menuChoice, quantity;
         double totalAmount = 0;
+        String order = "";
+
         
         while (true) {
             
@@ -32,7 +34,7 @@ public class Restaurant {
             }
             
             //Validate menu choise
-            if (menuChoice < 1 || menuChoice > 4) {
+            if (menuChoice < 1 || menuChoice > 5) {
                 System.out.println("Invalid choice. Please select a valid menu item.");
                 continue;
             }
@@ -43,31 +45,32 @@ public class Restaurant {
             
             //Validate quantity
             if (quantity <=0) {
-                System.out.println("Inavlid quantity. please enter a positive integer.");
+                System.out.println("Invalid quantity. please enter a positive integer.");
                 continue;
             }
             
-            //Calculate total amount based on the selected ite,
+            //Calculate total amount based on the selected item
             switch (menuChoice) {
                 case 1:
                     totalAmount = 100 * quantity;
-                    System.out.println("You ordered Burger.");
+                    order = "Burger";
+                
                     break;
                 case 2:
                     totalAmount = 50 * quantity;
-                    System.out.println("You ordered Fries.");
+                    order = "Fries";
                     break;
                 case 3:
                     totalAmount = 30 * quantity;
-                    System.out.println("You ordered Soda.");
+                    order = "Soda";
                     break;
                 case 4:
                     totalAmount = 45 * quantity;
-                    System.out.println("You ordered Ice Cream.");
+                    order = "Ice Cream";
                     break;
                 
             }
-            
+            System.out.println("You ordered " + order);
             //Display the total amount
             System.out.printf("Total amount: PHP %.2f%n", totalAmount);
         }    
@@ -77,4 +80,3 @@ public class Restaurant {
       
     }
 }
-
