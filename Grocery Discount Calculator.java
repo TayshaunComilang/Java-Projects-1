@@ -9,11 +9,13 @@ public class Grocery {
         
         //Use Scanner class to input the total purchase amount
         Scanner scanner = new Scanner(System.in);
+        double totalAmount, discount, finalPrice;
+        
         System.out.println("Enter the total purchace amount (PHP): ");
-        double totalAmount = scanner.nextDouble();
+        totalAmount = scanner.nextDouble();
         
         //Initialized dicount variables
-        double discount, finalPrice = 0;
+        discount, finalPrice = 0;
         
         //Determine discount based on the total purchased amount
         if (totalAmount < 1000) {
