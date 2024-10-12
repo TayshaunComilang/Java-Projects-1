@@ -54,7 +54,6 @@ public class Restaurant {
                 case 1:
                     totalAmount = 100 * quantity;
                     order = "Burger";
-                
                     break;
                 case 2:
                     totalAmount = 50 * quantity;
