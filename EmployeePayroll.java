@@ -1,9 +1,7 @@
-//Comilang, Tayshaun M.
+Comilang, Tayshaun M.
 //CITCS 1N-A
 
 package com.mycompany.employeepayroll;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 class Employee {
@@ -25,6 +23,7 @@ class Employee {
 
     // Display employee details
     public void displayEmployeeDetails() {
+        double salary = calculateSalary();
         System.out.printf("ID: %s, Name: %s, Wage: %.2f, Hours Worked: %.2f, Salary: %.2f%n",
                 employeeID, name, hourlyWage, hoursWorked, calculateSalary());
     }
@@ -37,11 +36,11 @@ public class EmployeePayroll {
         String id, name; 
         double wage, hours;
         
-        List<Employee> employees = new ArrayList<>();
+        Employee[] employees = new Employee[2];
 
         // Create Employee objects
-        for (int i = 1; i <= 2; i++) { 
-            System.out.printf("Employee %d:%n", i);
+        for (int i = 0; i < 2; i++) { 
+            System.out.printf("Employee %d:%n", i + 1);
             System.out.print("ID: ");
             id = scanner.nextLine();
             
@@ -55,7 +54,7 @@ public class EmployeePayroll {
             hours = scanner.nextDouble();
             scanner.nextLine(); 
             
-            employees.add(new Employee(id, name, wage, hours));
+            employees[i] = new Employee(id, name, wage, hours);
         }
 
         System.out.println("\nCalculating salaries...\n");
